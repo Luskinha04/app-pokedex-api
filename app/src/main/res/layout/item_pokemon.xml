@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imageViewPokemon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageViewPokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#001"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/textViewName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/textViewType1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/type_background"
+        android:text="Type1"
+        android:textColor="@android:color/white"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewType2"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewType2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/type_background"
+        android:text="Type2"
+        android:textColor="@android:color/white"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumber"
+        app:layout_constraintStart_toEndOf="@id/textViewType1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
